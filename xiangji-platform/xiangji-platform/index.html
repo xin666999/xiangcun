@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乡技传承 · 桂冀土专家数字档案与技术赋能服务平台</title>
+  <meta name="description" content="基于广西、河北两地131位土专家实地调研数据的数字档案与技术赋能服务平台">
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== Fixed top navigation ===================== -->
+  <header class="site-nav">
+    <div class="brand">
+      <span class="brand-title">「<span class="accent">乡技传承</span>」</span>
+      <span class="brand-sub">桂冀土专家数字赋能平台</span>
+    </div>
+
+    <nav class="nav-actions" id="nav-actions">
+      <button class="nav-btn active" type="button" data-target="dashboard">数据洞察</button>
+      <button class="nav-btn" type="button" data-target="archive">专家档案</button>
+      <button class="nav-btn" type="button" data-target="ai-chat">AI问答</button>
+    </nav>
+  </header>
+
+  <!-- ===================== Page content ===================== -->
+  <main class="page-content">
+
+    <!-- ---------- Module 1: data dashboard (default visible) ---------- -->
+    <section id="dashboard" class="module active" aria-label="数据洞察">
+      <!-- The whole dashboard screen (title, metric cards, chart grid)
+           is rendered by js/dashboard.js into this mount point. -->
+      <div id="dashboard-screen"></div>
+    </section>
+
+    <!-- ---------- Module 2: expert archive (hidden by default) ---------- -->
+    <section id="archive" class="module" aria-label="专家档案">
+      <div class="module-head">
+        <h2 class="module-title">专家档案</h2>
+        <p class="module-subtitle">131位桂冀土专家数字画像 · 技能标签 · 技术成果</p>
+      </div>
+
+      <div class="card archive-card">
+        <div class="chart-placeholder">
+          <span class="placeholder-mark">✦</span>
+          <span>即将上线</span>
+          <span class="placeholder-hint">专家档案检索与画像模块建设中</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Module 3: AI Q&A (hidden by default) ---------- -->
+    <section id="ai-chat" class="module" aria-label="AI问答">
+      <div class="module-head">
+        <h2 class="module-title">AI问答</h2>
+        <p class="module-subtitle">基于两地实地调研语料的智能问答助手</p>
+      </div>
+
+      <div class="card ai-card">
+        <div class="chart-placeholder">
+          <span class="placeholder-mark">✦</span>
+          <span>即将上线</span>
+          <span class="placeholder-hint">调研语料检索增强问答模块建设中</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    基于广西·河北两地131位土专家实地调研数据
+  </footer>
+
+  <!-- ECharts (charting library) -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- ECharts word cloud extension (required by chart-wordcloud) -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+  <!-- Data layer: exposes global dashboardData / expertsData (do not modify) -->
+  <script src="js/data.js"></script>
+  <!-- Navigation / module switching -->
+  <script src="js/main.js"></script>
+  <!-- Dashboard rendering -->
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
